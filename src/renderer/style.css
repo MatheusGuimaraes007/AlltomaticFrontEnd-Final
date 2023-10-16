@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Rubik+Mono+One&display=swap');
+
+@import './index/index.css';
+@import 'login/login.css';
+@import '../renderer/register/register.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('../../public/images/newBackground.svg');
+  background-size: cover
+};
+
+:root {
+  /* paleta ver */
+  --primeiroVerde: #88B257; 
+  --segundoVerde:  #4A701C; 
+  --terceiroVerde: #284703; 
+  /* paleta cinza  */
+  --primeiroCinza: #292929;
+  --segundoCinza: #3D3D3D;
+  --terceiroCinza: #525252;
+  --quartoCinza: #666;
+  --quintoCinza: #7A7A7A;
+  --sextoCinza: #A3A3A3;
+  --setimoCinza: #CCC;
+}

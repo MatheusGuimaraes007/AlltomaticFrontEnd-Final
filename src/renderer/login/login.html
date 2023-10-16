@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Hello World!</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+  <section id="container">
+    <section class="imagePlant">
+      <img src="../../../public/images/florFundo.svg" alt="Imagem ilustrativa de uma planta">
+    </section>
+    <section class="formularioLogin">
+      <div class="container-formulario">
+        <div class="titulo">
+          <h1>ALLTOMATIC</h1>
+        </div>
+        <div class="formulario">
+          <img class="imageLogo" src="../../../public/images/logo_Alltomatic.svg" alt="Logo da empresa alltomatic">
+          <form>
+            <label for="login">Login:</label>
+            <input type="text" id="login" placeholder="nome de usuário ou email">
+            <span class="invalidLogin">Login inválido</span>
+            <label for="password">Senha:</label>
+            <input type="password" id="password" placeholder="digite sua senha">
+            <a>Esqueci minha senha</a>
+            <div class="buttonsForm">
+              <button type="submit" class="button1" id="entrar">ENTRAR</button>
+              <a href="pages/cadastro.html" target="_blank" class="button2">CADASTRAR-SE</a>
+            </div>
+          </form>
+          <div id="socialMedia">
+            <div class="media" id="instagram">
+              <a href="/">
+                <img src="../../../public/images/instagram.svg" alt="logo instagram">
+              </a>
+            </div>
+            <div class="media" id="facebook">
+              <a href="/">
+                <img src="../../../public/images/facebook.svg" alt="logo Facebook">
+              </a>
+            </div>
+            <div class="media" id="linkedin">
+              <a href="/">
+                <img src="../../../public/images/linkedin.svg" alt="logo linkedin">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+  <script type="module" src="login.js"></script>
+</body>
+
+
+</html>

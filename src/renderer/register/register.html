@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <section class="container">
+    <h1 class="tituloRegistro">Registrar-se</h1>
+    <form id="formCadastro">
+      <div id="dadosLogin">
+        <h1>Dados de Login</h1>
+        <div class="nomeCompleto">
+          <label for="firstName">Nome Completo:</label>
+          <div class="nomeCompletoInput">
+            <input type="text" placeholder="Primeiro nome" id="firstName">
+            <input type="text" placeholder="Sobrenome" id="secondName">
+          </div>
+        </div>
+        <div class="emailForm">
+          <label for="email">Email:</label>
+          <input type="email" placeholder="Digite seu email" id="email">
+        </div>
+        <div class="senhaForm">
+          <label for="password">Senha:</label>
+          <div class="senhaContainer">
+            <input type="password" placeholder="Digite sua senha" id="senha">
+            <input type="password" placeholder="Confirme sua senha" id="confirmPassword">
+          </div>
+        </div>
+        <div class="cpfDateContainer">
+          <div class="cpfContainer">
+            <label for="cpf">CPF:</label>
+            <input type="number" placeholder="Somente Números" id="cpf">
+          </div>
+          <div class="dateContainer">
+            <label for="date">Data de Nascimento:</label>
+            <input type="date" id="date">
+          </div>
+        </div>
+        <div class="celularForm">
+          <label for="numberPhone">Celular:</label>
+          <input type="number" placeholder="Somente Números" id="numberPhone">
+        </div>
+      </div>
+
+      <div id="dadosComplementares">
+        <h1>Dados Complementares</h1>
+        <div class="cepForm">
+          <label for="cep">CEP:</label>
+          <input type="number" placeholder="Somente Números" id="cep">
+          <button id="btnBuscarCep">BUSCAR CEP</button>
+        </div>
+        <p style="display: none;" id="cepNaoEncontrado">CEP não encontrado</p>
+        <a href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="_blank">Não sei meu CEP</a>
+        <div class="numeroLogradouro">
+          <div class="logradouro">
+            <label for="logradouro">Rua:</label>
+            <input type="text" placeholder="Digite Sua rua" id="logradouro">
+          </div>
+          <div class="numero">
+            <label for="numberHouse">Número:</label>
+            <input type="number" placeholder="Somente Números " id="numberHouse">
+          </div>
+        </div>
+        <div class="complemento">
+          <label for="complemento">Complemento:</label>
+          <input type="text" placeholder="Apartamento, Ponto de referência e etc..." id="complemento">
+        </div>
+        <div class="bairro">
+          <label for="bairro">Bairro:</label>
+          <input type="text" placeholder="Digite seu Bairro" id="bairro">
+        </div>
+        <div class="cidadeEstado">
+          <div class="cidade">
+            <label for="cidade">Cidade:</label>
+            <input type="text" placeholder="Digite sua Cidade" id="cidade">
+          </div>
+          <div class="estado">
+            <label for="estado" id="estadosLabel">Estado:</label>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="enviarFormulario">CADASTRAR-SE</button>
+    </form>
+  </section>
+  <script type="module" src="register.js"></script>
+</body>
+
+</html>
