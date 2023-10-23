@@ -23,4 +23,8 @@ export default class GetCep {
       throw new Error(error);
     }
   }
+
+  verificar() {
+    console.log('ok');
+  }
 }

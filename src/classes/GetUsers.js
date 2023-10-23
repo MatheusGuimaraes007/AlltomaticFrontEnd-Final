@@ -9,19 +9,27 @@ export default class GetUsers {
   async getUsers() {
     const response = await fetch('http://186.235.2.225/Users');
     const json = await response.json();
-    const api = () =>
+    console.log(json);
+    const api = () => {
       json.filter((item, index) => {
-        if (item.nome === this.login && item.password === this.password) {
-          // window.location.href = '../inicio/inicio.html';
+        if (item.username === this.login && item.password === this.password) {
           return index;
         }
       });
-    api();
-    this.loginFetch = api()[0].nome;
-    this.passwordFetch = api()[0].password;
-  }
-
-  setUsers() {
-    console.log(this.loginFetch);
+      api();
+      console.log(api());
+    };
+    // const api = () =>
+    //   json.filter((item) => {
+    //     if (item.nome === this.login && item.password === this.password) {
+    //       // window.location.href = '../inicio/inicio.html';
+    //       console.log(item);
+    //     }
+    //   });
+    // api();
+    // this.loginFetch = api()[0].nome;
+    // this.passwordFetch = api()[0].password;
   }
 }
+
+//Não estou conseguindo refazer o login. e preciso terminar o cadastro de usuários

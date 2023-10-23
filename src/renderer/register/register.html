@@ -17,34 +17,35 @@
         <div class="nomeCompleto">
           <label for="firstName">Nome Completo:</label>
           <div class="nomeCompletoInput">
-            <input type="text" placeholder="Primeiro nome" id="firstName">
-            <input type="text" placeholder="Sobrenome" id="secondName">
+            <input type="text" placeholder="Primeiro nome" id="firstName" required>
+            <input type="text" placeholder="Sobrenome" id="secondName" required>
           </div>
         </div>
         <div class="emailForm">
           <label for="email">Email:</label>
-          <input type="email" placeholder="Digite seu email" id="email">
+          <input type="email" placeholder="Digite seu email" id="email" required>
         </div>
         <div class="senhaForm">
           <label for="password">Senha:</label>
           <div class="senhaContainer">
-            <input type="password" placeholder="Digite sua senha" id="senha">
-            <input type="password" placeholder="Confirme sua senha" id="confirmPassword">
+            <input type="password" placeholder="Digite sua senha" id="senha" required>
+            <input type="password" placeholder="Confirme sua senha" id="confirmPassword" required>
           </div>
+          <span class="senhaIncorreta">As senhas precisam ser iguais</span>
         </div>
         <div class="cpfDateContainer">
           <div class="cpfContainer">
             <label for="cpf">CPF:</label>
-            <input type="number" placeholder="Somente Números" id="cpf">
+            <input type="number" placeholder="Somente Números" id="cpf" required>
           </div>
           <div class="dateContainer">
             <label for="date">Data de Nascimento:</label>
-            <input type="date" id="date">
+            <input type="date" id="date" required>
           </div>
         </div>
         <div class="celularForm">
           <label for="numberPhone">Celular:</label>
-          <input type="number" placeholder="Somente Números" id="numberPhone">
+          <input type="number" placeholder="Somente Números com DDD" id="numberPhone" required>
         </div>
       </div>
 
@@ -52,7 +53,7 @@
         <h1>Dados Complementares</h1>
         <div class="cepForm">
           <label for="cep">CEP:</label>
-          <input type="number" placeholder="Somente Números" id="cep">
+          <input type="number" placeholder="Somente Números" id="cep" required>
           <button id="btnBuscarCep">BUSCAR CEP</button>
         </div>
         <p style="display: none;" id="cepNaoEncontrado">CEP não encontrado</p>
@@ -60,11 +61,11 @@
         <div class="numeroLogradouro">
           <div class="logradouro">
             <label for="logradouro">Rua:</label>
-            <input type="text" placeholder="Digite Sua rua" id="logradouro">
+            <input type="text" placeholder="Digite Sua rua" id="logradouro" required>
           </div>
           <div class="numero">
             <label for="numberHouse">Número:</label>
-            <input type="number" placeholder="Somente Números " id="numberHouse">
+            <input type="number" placeholder="Somente Números " id="numberHouse" required>
           </div>
         </div>
         <div class="complemento">
@@ -73,20 +74,23 @@
         </div>
         <div class="bairro">
           <label for="bairro">Bairro:</label>
-          <input type="text" placeholder="Digite seu Bairro" id="bairro">
+          <input type="text" placeholder="Digite seu Bairro" id="bairro" required>
         </div>
         <div class="cidadeEstado">
           <div class="cidade">
             <label for="cidade">Cidade:</label>
-            <input type="text" placeholder="Digite sua Cidade" id="cidade">
+            <input type="text" placeholder="Digite sua Cidade" id="cidade" required>
           </div>
           <div class="estado">
             <label for="estado" id="estadosLabel">Estado:</label>
           </div>
         </div>
       </div>
-      <button type="submit" class="enviarFormulario">CADASTRAR-SE</button>
+      <button type="submit" class="enviarFormulario" id="btn-cadastro">CADASTRAR-SE</button>
     </form>
+    <div class="container-loading">
+      <span class="loader"></span>
+    </div>
   </section>
   <script type="module" src="register.js"></script>
 </body>
