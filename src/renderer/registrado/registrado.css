@@ -1,0 +1,37 @@
+.container-registrado {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--fonteGeral);
+}
+.container-registrado h1 {
+  font-size: 3rem;
+  color: white;
+}
+.container-btn-registrado {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+}
+.container-btn-registrado a {
+  background-color: blue;
+  text-decoration: none;
+  padding: 0.625rem 0.9375rem;
+  border-radius: 0.8rem;
+  color: white;
+  font-weight: 500;
+  opacity: .9;
+}
+.container-btn-registrado a:hover {
+  opacity: 1;
+}
+.container-btn-registrado a:nth-child(1) {
+  background-color: var(--segundoVerde);
+}
+.container-btn-registrado a:nth-child(2) {
+  background-color: var(--primeiroVerde);
+}

@@ -1,15 +1,18 @@
-import GetUsers from '../../classes/GetUsers.js';
+import newLogin from '../../classes/userLoginInstance.js';
 
 const btnEntrar = document.querySelector('#entrar');
 const login = document.querySelector('#login');
 const password = document.querySelector('#password');
 
 const handleEntrar = async (e) => {
-  const users = new GetUsers(login.value, password.value);
+  localStorage.clear();
   e.preventDefault();
-  await users.getUsers();
+  newLogin.usuario = login.value;
+  newLogin.senha = password.value;
+  await newLogin.login();
+  localStorage.setItem('usuario', login.value);
+  localStorage.setItem('senha', password.value);
+  console.log(newLogin.nome);
 };
 
-if (btnEntrar) {
-  btnEntrar.addEventListener('click', handleEntrar);
-}
+btnEntrar.addEventListener('click', handleEntrar);

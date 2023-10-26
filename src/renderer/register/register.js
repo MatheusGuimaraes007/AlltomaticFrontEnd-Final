@@ -18,43 +18,60 @@ const complemento = document.querySelector('#complemento');
 const bairro = document.querySelector('#bairro');
 const cidade = document.querySelector('#cidade');
 const estado = document.querySelector('.select-estados');
+const containerAlert = document.querySelector('.ctrl');
+const msgNotification = document.querySelector('.nortification');
 
 const enviarUser = async (e) => {
   e.preventDefault();
   if (primeiroNome.value === '') {
-    alert('Preencha o campo Nome!');
+    containerAlert.style.diplay = 'initial';
+    msgNotification.innerHTML = 'Insira seu primeiro nome';
   } else if (segundoNome.value === '') {
-    alert('Preencha o campo Sobrenome!');
+    containerAlert.style.diplay = 'initial';
+    msgNotification.innerHTML = 'Insira seu segundo nome';
   } else if (email.value === '') {
-    alert('Preencha o campo email');
+    containerAlert.style.display = 'initial';
+    msgNotification.innerHTML = 'Insira um email';
   } else if (senha.value === '') {
-    alert('Insira uma senha');
+    containerAlert.style.display = 'initial';
+    msgNotification.innerHTML = 'Crie uma senha';
   } else if (confirmSenha.value === '') {
-    alert('Confirme sua senha');
+    containerAlert.style.display = 'initial';
+    msgNotification.innerHTML = 'Confirme sua senha';
   } else if (cpf.value === '') {
-    alert('Insira um CPF');
+    containerAlert.style.display = 'initial';
+    msgNotification.innerHTML = 'Insira seu CPF';
   } else if (dataNascimento.value === '') {
-    alert('Insira uma data de nascimento');
+    containerAlert.style.display = 'initial';
+    msgNotification.innerHTML = 'Insira sua data de nascimento';
   } else if (numTelefone.value === '') {
-    alert('Insira um número de celular');
+    containerAlert.style.display = 'initial';
+    msgNotification.innerHTML = 'Insira seu número de celular';
   } else if (cep.value === '') {
-    alert('Insira um cep válido');
+    containerAlert.style.display = 'initial';
+    msgNotification.innerHTML = 'Insira um CEP válido';
   } else if (logradouro.value === '' || logradouro.value === undefined) {
-    alert('Insira uma Rua válida');
+    containerAlert.style.display = 'initial';
+    msgNotification.innerHTML = 'Insira uma rua válida';
   } else if (numeroCasa.value === '') {
-    alert('Insira o Número da sua residência');
+    containerAlert.style.display = 'initial';
+    msgNotification.innerHTML = 'Insira o número da sua redidência';
   } else if (bairro.value === '' || bairro.value === undefined) {
-    alert('Insira um bairro válido');
+    containerAlert.style.display = 'initial';
+    msgNotification.innerHTML = 'Insira um bairro válido';
   } else if (cidade.value === '' || cidade.value === undefined) {
-    alert('Insira  uma Cidade válida');
+    containerAlert.style.display = 'initial';
+    msgNotification.innerHTML = 'Insira uma cidade válida';
   } else if (estado.value === '') {
-    alert('Insira um estado válido');
+    containerAlert.style.display = 'initial';
+    msgNotification.innerHTML = 'Selecione um estado';
   } else {
     const senhaIncorreta = document.querySelector('.senhaIncorreta');
     if (senha.value !== confirmSenha.value) {
       senhaIncorreta.style.display = 'initial';
     } else {
       senhaIncorreta.style.display = 'none';
+      containerAlert.style.diplay = 'none';
       const post = new UserRegister(
         primeiroNome.value,
         segundoNome.value,

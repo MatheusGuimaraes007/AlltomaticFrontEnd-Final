@@ -50,7 +50,7 @@ export default class SetUsers {
         }),
       });
       loading.style.display = 'none';
-      window.location = '../index/index.html';
+      window.location = '../registrado/registrado.html';
     } catch (err) {
       loading.style.display = 'none';
       console.log(err);

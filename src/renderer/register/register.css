@@ -206,6 +206,7 @@ input:focus {
   font-weight: 700;
 }
 
+
 /* loader */
 .container-loading {
   position: absolute;
@@ -249,3 +250,49 @@ input:focus {
     transform: rotate(360deg);
   }
 } 
+
+body{
+  background-color:#00bcac;
+  margin:0;
+  padding:0;
+}
+
+.ctrl{
+	width:100%;
+  position:relative;
+  display: none;
+}
+
+
+.nortification{
+  font-family: var(--fonteGeral);
+	display:block;
+	font-size:1rem;
+	padding:10px 15px;
+	position:absolute;
+  top:0;
+  left:50%;
+  margin-left:-90px;
+  box-sizing:border-box;
+  border-radius:15px;
+  background-color:red;
+  color:white;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 3px 0 rgba(0,0,0,0.2);
+}
+
+.animateOpen{
+	-webkit-animation:moveOpen 4s;
+}
+/* Safari and Chrome */
+@-webkit-keyframes moveOpen 
+	{
+  from {-webkit-transform: translate(0,-100px);}
+  10% {-webkit-transform: translate(0,20px);}
+  12% {-webkit-transform: translate(0,22px);}
+  16% {-webkit-transform: translate(0,20px);}
+  80% {-webkit-transform: translate(0,20px);}
+  85% {-webkit-transform: translate(0,25px);}
+  to {-webkit-transform: translate(0,-100px); display: none;}
+}
