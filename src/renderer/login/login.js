@@ -10,8 +10,6 @@ const handleEntrar = async (e) => {
   newLogin.usuario = login.value;
   newLogin.senha = password.value;
   await newLogin.login();
-  localStorage.setItem('usuario', login.value);
-  localStorage.setItem('senha', password.value);
   console.log(newLogin.nome);
 };
 

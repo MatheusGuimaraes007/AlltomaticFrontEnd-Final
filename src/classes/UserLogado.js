@@ -1,4 +1,4 @@
-export default class UserLogin {
+export default class UserLogado {
   constructor(usuario, senha) {
     this.usuario = usuario;
     this.senha = senha;
@@ -14,7 +14,7 @@ export default class UserLogin {
     this.cpf = '';
   }
 
-  async login() {
+  async user() {
     try {
       const response = await fetch(this.url, {
         method: 'POST',
@@ -27,16 +27,18 @@ export default class UserLogin {
         }),
       });
       const json = await response.json();
-      if (json.msg) {
-        console.log('nao existe');
-      } else {
-        localStorage.setItem('usuario', this.usuario);
-        localStorage.setItem('senha', this.senha);
-      }
+      this.nome = json[0].nome;
+      this.sobrenome = json[0].sobrenome;
+      this.dataNascimento = json[0].dataNascimento;
+      this.enderecoCep = json[0].enderecoCep;
+      this.enderecoLogradouro = json[0].enderecoLogradouro;
+      this.enderecoBairro = json[0].enderecoBairro;
+      this.enderecoNum = json[0].enderecoNum;
+      this.enderecoComplemento = json[0].enderecoComplemento;
+      this.cpf = json[0].cpf;
       console.log(json);
-      window.location = '../inicio/inicio.html';
     } catch (err) {
-      console.log('nao existe');
+      console.log('Erro na requisição');
     }
   }
 }

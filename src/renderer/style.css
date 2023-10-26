@@ -5,6 +5,7 @@
 @import 'login/login.css';
 @import '../renderer/register/register.css';
 @import '../renderer/registrado/registrado.css';
+@import '../renderer/inicio/inicio.css';
 
 * {
   margin: 0;
