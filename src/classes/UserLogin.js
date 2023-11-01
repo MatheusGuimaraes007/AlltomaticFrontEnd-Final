@@ -28,15 +28,14 @@ export default class UserLogin {
       });
       const json = await response.json();
       if (json.msg) {
-        console.log('nao existe');
+        alert('Usuário não encontrado');
       } else {
         localStorage.setItem('usuario', this.usuario);
         localStorage.setItem('senha', this.senha);
+        window.location = '../inicio/inicio.html';
       }
-      console.log(json);
-      window.location = '../inicio/inicio.html';
     } catch (err) {
-      console.log('nao existe');
+      throw new Error(err);
     }
   }
 }

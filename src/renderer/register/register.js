@@ -1,5 +1,7 @@
 import BuscarCep from '../../classes/BuscarCep.js';
 import UserRegister from '../../classes/UserRegister.js';
+import validarCPF from '../../classes/validar.js';
+
 BuscarCep();
 
 const btnCadastrar = document.querySelector('#btn-cadastro');
@@ -41,6 +43,9 @@ const enviarUser = async (e) => {
   } else if (cpf.value === '') {
     containerAlert.style.display = 'initial';
     msgNotification.innerHTML = 'Insira seu CPF';
+  } else if (!validarCPF(cpf.value)) {
+    containerAlert.style.display = 'initial';
+    msgNotification.innerHTML = 'CPF Inválido';
   } else if (dataNascimento.value === '') {
     containerAlert.style.display = 'initial';
     msgNotification.innerHTML = 'Insira sua data de nascimento';

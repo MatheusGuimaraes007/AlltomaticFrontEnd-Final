@@ -283,16 +283,12 @@ body{
 }
 
 .animateOpen{
-	-webkit-animation:moveOpen 4s;
+	-webkit-animation:moveOpen 4s forwards;
 }
 /* Safari and Chrome */
 @-webkit-keyframes moveOpen 
 	{
-  from {-webkit-transform: translate(0,-100px);}
-  10% {-webkit-transform: translate(0,20px);}
-  12% {-webkit-transform: translate(0,22px);}
-  16% {-webkit-transform: translate(0,20px);}
-  80% {-webkit-transform: translate(0,20px);}
-  85% {-webkit-transform: translate(0,25px);}
-  to {-webkit-transform: translate(0,-100px); display: none;}
+  0 {-webkit-transform: translate(0,-100px);}0
+  80% {-webkit-transform: translate(0,20px);}0
+  100% {-webkit-transform: translate(0,-100px); display: none;}
 }

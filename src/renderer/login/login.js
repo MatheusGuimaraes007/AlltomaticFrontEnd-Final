@@ -10,7 +10,6 @@ const handleEntrar = async (e) => {
   newLogin.usuario = login.value;
   newLogin.senha = password.value;
   await newLogin.login();
-  console.log(newLogin.nome);
 };
 
 btnEntrar.addEventListener('click', handleEntrar);

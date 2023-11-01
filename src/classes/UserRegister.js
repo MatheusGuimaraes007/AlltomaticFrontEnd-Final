@@ -30,7 +30,7 @@ export default class SetUsers {
     const loading = document.querySelector('.container-loading');
     try {
       loading.style.display = 'flex';
-      const response = await fetch(this.url, {
+      const response = await fetch('http://186.235.2.225/Users', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -49,11 +49,16 @@ export default class SetUsers {
           password: this.password,
         }),
       });
-      loading.style.display = 'none';
-      window.location = '../registrado/registrado.html';
+      const json = await response.json();
+      if (json.Error) {
+        alert('Email já cadastrado');
+      } else {
+        loading.style.display = 'none';
+        window.location = '../registrado/registrado.html';
+      }
     } catch (err) {
       loading.style.display = 'none';
-      console.log(err);
+      throw new Error(err);
     }
   }
 }
