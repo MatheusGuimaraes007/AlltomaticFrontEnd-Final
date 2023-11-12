@@ -1,8 +1,17 @@
 import BuscarCep from '../../classes/BuscarCep.js';
 import UserRegister from '../../classes/UserRegister.js';
-import validarCPF from '../../classes/validar.js';
 
 BuscarCep();
+
+const validarCPF = (cpf) => {
+  cpf = cpf.replace(/\D/g, '');
+
+  if (cpf.length !== 11) {
+    return false;
+  }
+
+  return true;
+};
 
 const btnCadastrar = document.querySelector('#btn-cadastro');
 const primeiroNome = document.querySelector('#firstName');

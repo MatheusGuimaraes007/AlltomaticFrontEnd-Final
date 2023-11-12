@@ -1,0 +1,345 @@
+:root {
+  /* paleta ver */
+  --primeiroVerde: #88B257; 
+  --segundoVerde:  #4A701C; 
+  --terceiroVerde: #284703; 
+  /* paleta cinza  */
+  --primeiroCinza: #292929;
+  --segundoCinza: #3D3D3D;
+  --terceiroCinza: #525252;
+  --quartoCinza: #666;
+  --quintoCinza: #7A7A7A;
+  --sextoCinza: #A3A3A3;
+  --setimoCinza: #CCC;
+}
+body {
+  background-color: var(--segundoVerde);
+}
+
+#headerMinhasPlantas {
+  background-color: var(--primeiroVerde);
+  width: 100%;
+  height: 18vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  position: fixed;
+}
+.infoUser {
+  display: flex;
+  width: 33%;
+  gap: 10px;
+}
+.imgUser {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-image: url('../../../public/images/user.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.infoUserDesc {
+  display: flex;
+  flex-direction: column;
+}
+.infoUserDesc span {
+  font-family: var(--fonteGeral);
+  color: white;
+}
+.infoUserDesc .nomeUser {
+  font-size: 25px;
+}
+.idUser {
+  font-size: 20px;
+}
+.infoUserDesc img {
+  width: 30px;
+}
+.infoUserDesc div {
+  display: flex;
+  align-items: center;
+}
+.infoUserDesc div span:nth-child(1) {
+  text-decoration: underline;
+}
+.infoUserDesc div span:nth-child(3) {
+  margin-left: 20px;
+}
+.infoUserDesc div span img {
+  width: 25px;
+}
+.infoUserDesc a {
+  margin-top: 5px;
+}
+.buscarPlanta {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.buscarPlanta span {
+  font-family: var(--fonteGeral);
+  color: white;
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+.pesquisarPlanta {
+  display:flex;
+
+}
+.pesquisarPlanta input {
+  width: 50%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.pesquisarPlanta button {
+  padding: 5px 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #ccc;
+  border: none;
+}
+.onOrOff {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.conectado span , .ligado span {
+  font-family: var(--fonteGeral);
+  color: white;
+  font-weight: 500;
+}
+#sectionPrincipal {
+  display: flex;
+}
+#navegacao {
+  background-color: var(--primeiroVerde);
+  width: 25%;
+  height: 85vh;
+  border-top: solid 1px black;
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25); 
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 18vh;
+}
+#abas {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#abas a {
+  border-bottom: solid 1px black;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--fonteGeral);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+}
+#abas a:hover {
+  background-color: var(--segundoVerde);
+}
+#abas a span {
+  margin-right: 4rem;
+}
+.rodapeNav {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.rodapeNav img {
+  width: 30%;
+}
+#socialMediaMinhasPlantas {
+  margin-top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+
+.configConta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: var(--fonteGeral);
+  color: #fff;
+  font-weight: 700;
+  position: absolute;
+  left: 26%;
+  top: 20vh;
+  z-index: -1;
+  width: 73%;
+}
+
+.fundoVerde {
+  background-color: var(--segundoVerde);
+}
+
+.userDados {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.nomeUsuarioEmailSenha, .userEndereco {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1.4rem;
+  background-color: var(--terceiroVerde);
+  padding: 10px;
+  border-radius: 0.625rem;
+}
+.nomeUsuarioEmailSenha h1, .userEndereco h1 {
+  font-size: 1.7rem;
+  text-decoration: underline;
+}
+.userEndereco {
+  margin-top: 1rem;
+}
+
+.nomeUsuarioEmailSenha div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3125rem;
+  padding: 2px;
+}
+
+.nomeUsuarioEmailSenha button, .userEndereco button {
+  border: none;
+  padding: 0.3125rem 0.625rem;
+  border-radius: 0.3rem;
+  background-color: var(--primeiroVerde);
+  color: white;
+  font-weight: bold;
+  font-family: var(--fonteGeral);
+  cursor: pointer;
+  opacity: .8;
+}
+.nomeUsuarioEmailSenha button:hover, .userEndereco button:hover {
+  opacity: 1;
+}
+
+.nomeUsuarioEmailSenha div {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.userEndereco span::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 20rem;
+  background-color: var(--primeiroVerde);
+}
+.nomeUsuarioEmailSenha span::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 20rem;
+  background-color: var(--primeiroVerde);
+}
+
+.nomeUsuarioEmailSenha div:nth-child(5) {
+  gap: 1.4rem;
+}
+
+/* 
+Tooltip */
+.aba-alterar {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.alterar-dados {
+  border-radius: 0.625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  background-image: url('../../../public/images/newBackground.svg');
+  background-size: cover;
+  object-fit: cover;
+  padding: 0.625rem;
+}
+.alterar-endereco {
+  border-radius: 0.625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  background-image: url('../../../public/images/newBackground.svg');
+  background-size: cover;
+  object-fit: cover;
+  padding: 0.625rem;
+}
+.alterar-endereco form, .alterar-dados form {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+}
+.close-endereco {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background-color: white;
+  bottom: 10vh;
+  background-image: url('../../../public/images/close.svg');
+  background-size: cover;
+  cursor: pointer;
+  align-self: self-end;
+}
+.close-endereco:hover {
+  background-color: var(--terceiroVerde);
+}
+.alterar-dados form label, .alterar-endereco form label {
+  margin-top: 1rem;
+}
+#save-endereco, #save-data {
+  border: none;
+  margin-top: 1rem;
+  width: 40%;
+  align-self: center;
+  padding: 0.625rem;
+  border-radius: 0.625rem;
+  background-color: var(--segundoVerde);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  opacity: .8;
+  cursor: pointer;
+}
+#save-endereco:hover {
+  opacity: 1;
+}

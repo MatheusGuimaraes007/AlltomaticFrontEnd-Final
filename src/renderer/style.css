@@ -6,6 +6,7 @@
 @import '../renderer/register/register.css';
 @import '../renderer/registrado/registrado.css';
 @import '../renderer/inicio/inicio.css';
+@import '../renderer/configConta/configConta.css';
 
 * {
   margin: 0;

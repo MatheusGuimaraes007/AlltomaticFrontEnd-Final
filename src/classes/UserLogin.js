@@ -3,15 +3,7 @@ export default class UserLogin {
     this.usuario = usuario;
     this.senha = senha;
     this.url = 'http://186.235.2.225/auth/User';
-    this.nome = '';
-    this.sobrenome = '';
-    this.dataNascimento = '';
-    this.enderecoCep = '';
-    this.enderecoLogradouro = '';
-    this.enderecoBairro = '';
-    this.enderecoNum = '';
-    this.enderecoComplemento = '';
-    this.cpf = '';
+    this.dados;
   }
 
   async login() {
@@ -27,14 +19,28 @@ export default class UserLogin {
         }),
       });
       const json = await response.json();
-      if (json.msg) {
-        alert('Usuário não encontrado');
-      } else {
-        localStorage.setItem('usuario', this.usuario);
-        localStorage.setItem('senha', this.senha);
-        window.location = '../inicio/inicio.html';
+      if (
+        window.location.href !==
+        'http://127.0.0.1:5501/my-app/src/renderer/configConta/configConta.html'
+      ) {
+        if (json.msg) {
+          confirm('Usuário não encontrado');
+        } else {
+          localStorage.setItem('usuario', this.usuario);
+          localStorage.setItem('senha', this.senha);
+          if (
+            window.location.href ===
+            'http://127.0.0.1:5501/my-app/src/renderer/configConta/configConta.html'
+          ) {
+            window.location = '../configConta/configConta.html';
+          } else {
+            window.location = '../inicio/inicio.html';
+          }
+        }
       }
+      this.dados = json[0];
     } catch (err) {
+      localStorage.clear();
       throw new Error(err);
     }
   }
