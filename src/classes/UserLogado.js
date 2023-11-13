@@ -3,15 +3,7 @@ export default class UserLogado {
     this.usuario = usuario;
     this.senha = senha;
     this.url = 'http://186.235.2.225/auth/User';
-    this.nome = '';
-    this.sobrenome = '';
-    this.dataNascimento = '';
-    this.enderecoCep = '';
-    this.enderecoLogradouro = '';
-    this.enderecoBairro = '';
-    this.enderecoNum = '';
-    this.enderecoComplemento = '';
-    this.cpf = '';
+    this.dados = '';
   }
 
   async user() {
@@ -27,16 +19,7 @@ export default class UserLogado {
         }),
       });
       const json = await response.json();
-      this.nome = json[0].nome;
-      this.sobrenome = json[0].sobrenome;
-      this.dataNascimento = json[0].dataNascimento;
-      this.enderecoCep = json[0].enderecoCep;
-      this.enderecoLogradouro = json[0].enderecoLogradouro;
-      this.enderecoBairro = json[0].enderecoBairro;
-      this.enderecoNum = json[0].enderecoNum;
-      this.enderecoComplemento = json[0].enderecoComplemento;
-      this.cpf = json[0].cpf;
-      console.log(json);
+      this.dados = json[0];
     } catch (err) {
       console.log('Erro na requisição');
     }

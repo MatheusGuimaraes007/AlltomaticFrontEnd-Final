@@ -51,6 +51,9 @@ body {
 .infoUserDesc .nomeUser {
   font-size: 25px;
 }
+.idUser {
+  font-size: 20px;
+}
 .infoUserDesc img {
   width: 30px;
 }
@@ -169,50 +172,53 @@ body {
   margin-bottom: 20px;
 }
 
-#container-plantas {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-#container-plantas div:hover {
-  background-color: var(--segundoVerde);
-  border: 2px solid #fff;
-}
-
-.visualPlantas {
+/* Container irrigacao */
+.irrigacao {
   display: flex;
   flex-direction: column;
-  background-color: var(--primeiroVerde);
-  margin-top: 3rem;
-  margin-left: 2rem;
-  justify-content: center;
   align-items: center;
-  object-fit: cover;
-  width: 350px;
-  height: 300px;
-}
-
-
-.visualPlantas img {
-  height: 200px; 
-}
-
-.visualPlantas p {
-  font-family: var(--fonteGeral);
-  color: white;
-  font-weight: 700;
-  text-decoration: underline;
-
-}
-
-.visual {
-  display: flex;
   flex-wrap: wrap;
   font-family: var(--fonteGeral);
   color: #fff;
   font-weight: 700;
   position: absolute;
-  left: 22.8125rem;
-  top: 15vh;
-  z-index: -1;
+  left: 26%;
+  top: 20vh;
+  z-index: 100;
+  width: 73%;
+}
+.irrigacao .irrigacao-head {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.irrigacao .irrigacao-head h1 {
+  font-size: 2.5rem;
+}
+.irrigacao .irrigacao-head label {
+  margin-top: 2rem;
+}
+.irrigacao .irrigacao-head input {
+  width: 35%;
+}
+.irrigacao .table {
+  margin-top: 2rem;
+}
+
+.irrigacao-head button {
+  border: none;
+  padding: 0.6rem 2rem;
+  border-radius: 0.3rem;
+  background-color: var(--primeiroVerde);
+  color: white;
+  font-weight: bold;
+  font-family: var(--fonteGeral);
+  cursor: pointer;
+  opacity: .5;
+  margin-top: 1rem;
+}
+.irrigacao-head button {
+  opacity: 1;
 }

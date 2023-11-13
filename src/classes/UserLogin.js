@@ -7,6 +7,7 @@ export default class UserLogin {
   }
 
   async login() {
+    localStorage.clear();
     try {
       const response = await fetch(this.url, {
         method: 'POST',
@@ -19,26 +20,14 @@ export default class UserLogin {
         }),
       });
       const json = await response.json();
-      if (
-        window.location.href !==
-        'http://127.0.0.1:5501/my-app/src/renderer/configConta/configConta.html'
-      ) {
-        if (json.msg) {
-          confirm('Usuário não encontrado');
-        } else {
-          localStorage.setItem('usuario', this.usuario);
-          localStorage.setItem('senha', this.senha);
-          if (
-            window.location.href ===
-            'http://127.0.0.1:5501/my-app/src/renderer/configConta/configConta.html'
-          ) {
-            window.location = '../configConta/configConta.html';
-          } else {
-            window.location = '../inicio/inicio.html';
-          }
-        }
+      if (json.msg) {
+        confirm('Usuário não encontrado');
+      } else {
+        localStorage.setItem('usuario', this.usuario);
+        localStorage.setItem('senha', this.senha);
+        window.location = '../configConta/configConta.html';
+        // this.dados = json[0];
       }
-      this.dados = json[0];
     } catch (err) {
       localStorage.clear();
       throw new Error(err);

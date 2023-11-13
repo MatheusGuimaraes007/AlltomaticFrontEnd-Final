@@ -18,13 +18,6 @@
         <span class="idUser"></span>
       </div>
     </div>
-    <div class="buscarPlanta">
-      <span>Busque sua Planta</span>
-      <div class="pesquisarPlanta">
-        <input type="text" placeholder="Digite o nome">
-        <button><img src="../../../public/images/lupa.svg" alt="pesquisar"></button>
-      </div>
-    </div>
     <div class="onOrOff">
       <div class="conectado">
         <span>Conectado</span>
@@ -45,15 +38,11 @@
           <img src="../../../public/images/configConta.svg" alt="configuracoes de conta">
           <span>Configurações de Conta</span>
         </a>
-        <a href="../inicio/inicio.html">
-          <img src="../../../public/images/minhasPlantas.svg" alt="Mnhas Plantas">
-          <span>Minhas Plantas</span>
-        </a>
         <a href="/">
           <img src="../../../public/images/meuProgresso.svg" alt="configuracoes de conta">
           <span>Meu Progresso</span>
         </a>
-        <a href="/">
+        <a href="../irrigacao/irrigacao.html">
           <img src="../../../public/images/irrigacao.svg" alt="configuracoes de conta">
           <span>Irrigação</span>
         </a>
@@ -93,15 +82,15 @@
           <h1>Dados Pessoais</h1>
           <div>
             <span class="nomeUsuario">Nome</span>
-            <button class="alt-name">Alterar Nome</button>
+            <a class="alt-name">Alterar Nome</a>
           </div>
           <div>
             <span class="senha">Senha</span>
-            <button class="alt-password">Alterar Senha</button>
+            <a class="alt-password">Alterar Senha</a>
           </div>
           <div>
             <span class="email">Email</span>
-            <button class="alt-email">Alterar Email</button>
+            <a class="alt-email">Alterar Email</a>
           </div>
           <div>
             <span class="cpf">CPF</span>
@@ -115,37 +104,12 @@
           <span class="cep">Cep</span>
           <span class="numero">numero</span>
           <span class="complemento">complemento</span>
-          <button class="alt-endereco">Alterar Endereço</button>
+          <a class="alt-endereco">Alterar Endereço</a>
         </div>
       </div>
     </section>
   </section>
-  <div class="aba-alterar">
-    <div class="alterar-dados">
-      <form>
-        <button class="close-endereco"></button>
-        <label for="newData" id="nameAlteracao">dado</label>
-        <input type="text" name="newData" id="newData">
-        <button type="submit" id="save-data">Salvar</button>
-      </form>
-    </div>
-    <div class="alterar-endereco">
-      <form>
-        <button class="close-endereco"></button>
-        <label for="alt-logradouro">Rua</label>
-        <input type="text" name="rua" id="alt-logradouro">
-        <label for="alt-bairro">Bairro</label>
-        <input type="text" name="bairro" id="alt-bairro">
-        <label for="alt-cep">CEP</label>
-        <input type="text" name="cep" id="alt-cep">
-        <label for="alt-numero">Número</label>
-        <input type="text" name="numero" id="alt-numero">
-        <label for="">Complemento</label>
-        <input type="text" name="complemento" id="alt-complemento">
-        <button type="submit" id="save-endereco">Salvar</button>
-      </form>
-    </div>
-  </div>
+
   <script type="module" src="configConta.js"></script>
 </body>
 

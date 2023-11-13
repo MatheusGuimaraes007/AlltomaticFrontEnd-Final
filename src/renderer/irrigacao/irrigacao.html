@@ -8,21 +8,18 @@
   <link rel="stylesheet" href="../style.css">
 </head>
 
-<body>
+<body style="background-image: none;">
   <header id="headerMinhasPlantas">
 
     <div class="infoUser">
       <div class="imgUser"></div>
       <div class="infoUserDesc">
         <span class="nomeUser"></span>
+        <span class="idUser"></span>
       </div>
     </div>
     <div class="buscarPlanta">
       <span>Busque sua Planta</span>
-      <div class="pesquisarPlanta">
-        <input type="text" placeholder="Digite o nome">
-        <button><img src="../../../public/images/lupa.svg" alt="pesquisar"></button>
-      </div>
     </div>
     <div class="onOrOff">
       <div class="conectado">
@@ -44,15 +41,11 @@
           <img src="../../../public/images/configConta.svg" alt="configuracoes de conta">
           <span>Configurações de Conta</span>
         </a>
-        <a href="inicio.html" class="fundoVerde">
-          <img src="../../../public/images/minhasPlantas.svg" alt="Minhas Plantas">
-          <span>Minhas Plantas</span>
-        </a>
         <a href="/">
           <img src="../../../public/images/meuProgresso.svg" alt="configuracoes de conta">
           <span>Meu Progresso</span>
         </a>
-        <a href="/">
+        <a href="/" class="fundoVerde">
           <img src="../../../public/images/irrigacao.svg" alt="configuracoes de conta">
           <span>Irrigação</span>
         </a>
@@ -86,61 +79,24 @@
         </div>
       </div>
     </nav>
-    <section class="visual">
-      <div id="container-plantas">
-        <a href="/">
-          <div class="visualPlantas">
-            <img src="../../../public/images/florFundo.svg" alt="Imagem ilustrativa da planta do usuário">
-            <p>Morango</p>
-          </div>
-        </a>
-        <a href="/">
-          <div class="visualPlantas">
-            <img src="../../../public/images/florFundo.svg" alt="Imagem ilustrativa da planta do usuário">
-            <p>Salsinha</p>
-          </div>
-        </a>
-        <a href="/">
-          <div class="visualPlantas">
-            <img src="../../../public/images/florFundo.svg" alt="Imagem ilustrativa da planta do usuário">
-            <p>Alface</p>
-          </div>
-        </a>
-        <a href="/">
-          <div class="visualPlantas">
-            <img src="../../../public/images/florFundo.svg" alt="Imagem ilustrativa da planta do usuário">
-            <p>Tomate</p>
-          </div>
-        </a>
-        <a href="/">
-          <div class="visualPlantas">
-            <img src="../../../public/images/florFundo.svg" alt="Imagem ilustrativa da planta do usuário">
-            <p>Cebolinha</p>
-          </div>
-        </a>
-        <a href="/">
-          <div class="visualPlantas">
-            <img src="../../../public/images/florFundo.svg" alt="Imagem ilustrativa da planta do usuário">
-            <p>Cenoura</p>
-          </div>
-        </a>
-        <a href="/">
-          <div class="visualPlantas">
-            <img src="../../../public/images/florFundo.svg" alt="Imagem ilustrativa da planta do usuário">
-            <p>Beterraba</p>
-          </div>
-        </a>
-        <a href="/">
-          <div class="visualPlantas">
-            <img src="../../../public/images/florFundo.svg" alt="Imagem ilustrativa da planta do usuário">
-            <p>ADICIONAR PLANTA</p>
-          </div>
-        </a>
-
+    <section class="irrigacao">
+      <div class="irrigacao-head">
+        <h1>Dados de Irrigação</h1>
+        <label for="dateIrrigacao">Selecione a data</label>
+        <input type="date" id="dateIrrigacao" required>
+        <button type="submit">Mostrar</button>
+      </div>
+      <div class="table">
+        <table border="2">
+          <tr>
+            <td>Nome</td>
+            <td>Valor</td>
+          </tr>
+        </table>
       </div>
     </section>
   </section>
-  <script type="module" src="inicio.js"></script>
+  <script type="module" src="irrigacao.js"></script>
 </body>
 
 </html>

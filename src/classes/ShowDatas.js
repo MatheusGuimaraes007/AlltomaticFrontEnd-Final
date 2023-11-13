@@ -1,6 +1,6 @@
-import UserLogin from './UserLogin.js';
+import UserLogado from './UserLogado.js';
 
-export default class ShowDatasUser extends UserLogin {
+export default class ShowDatas extends UserLogado {
   constructor(usuario, senha) {
     super(usuario, senha);
     this.nome = '';
@@ -13,7 +13,6 @@ export default class ShowDatasUser extends UserLogin {
     this.enderecoComplemento = '';
     this.cpf = '';
   }
-
   convertDate(dataNascimento) {
     const LocalDate = new Date(dataNascimento);
     const formatDate = LocalDate.toLocaleDateString('pt-BR', {
@@ -21,9 +20,8 @@ export default class ShowDatasUser extends UserLogin {
     });
     return formatDate;
   }
-
   async setDados() {
-    await this.login();
+    await this.user();
     this.nome = this.dados.nome;
     this.sobrenome = this.dados.sobrenome;
     this.dataNascimento = this.dados.dataNascimento;
@@ -33,23 +31,32 @@ export default class ShowDatasUser extends UserLogin {
     this.enderecoNum = this.dados.enderecoNum;
     this.enderecoComplemento = this.dados.enderecoComplemento;
     this.cpf = this.dados.cpf;
+    this.id = this.dados.id;
   }
-
   async showName(data) {
     await this.setDados();
-    data.innerHTML = `Nome: ${this.dados.nome} ${this.dados.sobrenome}`;
+    data.innerHTML = `Nome: ${this.nome} ${this.sobrenome}`;
   }
   async showPassword(data) {
     await this.setDados();
     data.innerHTML = `Senha: ********`;
   }
-
+  async showEmail(data) {
+    await this.setDados();
+    data.innerHTML = `Email: ${this.usuario}`;
+  }
   async showDatas(dataName, dataNameAPI, data) {
     await this.setDados();
     if (dataNameAPI === 'dataNascimento') {
       data.innerHTML = `${dataName}: ${this.convertDate(this.dataNascimento)}`;
     } else {
-      data.innerHTML = `${dataName}: ${this.dados[dataNameAPI]}`;
+      data.innerHTML = `${dataName}: ${this[dataNameAPI]}`;
     }
+  }
+
+  async showNameId(dataName, dataId) {
+    await this.setDados();
+    dataName.innerHTML = `${this.nome} ${this.sobrenome}`;
+    dataId.innerHTML = `#${this.id}`;
   }
 }

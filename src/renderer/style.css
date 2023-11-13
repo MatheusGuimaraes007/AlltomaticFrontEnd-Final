@@ -5,8 +5,8 @@
 @import 'login/login.css';
 @import '../renderer/register/register.css';
 @import '../renderer/registrado/registrado.css';
-@import '../renderer/inicio/inicio.css';
 @import '../renderer/configConta/configConta.css';
+@import url('../renderer/irrigacao/irrigacao.css');
 
 * {
   margin: 0;
