@@ -26,7 +26,6 @@ export default class UserLogin {
         localStorage.setItem('usuario', this.usuario);
         localStorage.setItem('senha', this.senha);
         window.location = '../configConta/configConta.html';
-        // this.dados = json[0];
       }
     } catch (err) {
       localStorage.clear();
