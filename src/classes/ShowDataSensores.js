@@ -21,15 +21,12 @@ export default class ShowDataSensores extends GetDataSensores {
     `;
     table.appendChild(headerRow);
 
-    // Adicionar a tabela ao elemento de posição
     this.position.appendChild(table);
 
-    // Atribuir a tabela à propriedade para referência posterior
     this.table = table;
   }
 
   createTableRow(nome, data, hora, dado) {
-    // Criar uma nova linha para cada item nos dados
     const newRow = document.createElement('tr');
     newRow.innerHTML = `
       <td>${nome}</td>
@@ -38,13 +35,11 @@ export default class ShowDataSensores extends GetDataSensores {
       <td>${dado}</td>
     `;
 
-    // Adicionar a nova linha à tabela existente
     this.table.appendChild(newRow);
   }
 
   async showDatas() {
     await this.getData();
-    // Utilizando forEach para percorrer os dados
     this.dados.forEach((item) => {
       if (this.sensor === 'UMIDADE') {
         return this.createTableRow(
