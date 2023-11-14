@@ -3,6 +3,7 @@ export default class GetDataSensores {
     this.date = date;
     this.sensor = sensor;
     this.url = `http://186.235.2.225/sensor/data/day/${this.sensor}`;
+    this.dados = '';
   }
 
   async getData() {
@@ -17,6 +18,7 @@ export default class GetDataSensores {
         }),
       });
       const json = await response.json();
+      this.dados = json;
       console.log(json);
     } catch (err) {}
   }
