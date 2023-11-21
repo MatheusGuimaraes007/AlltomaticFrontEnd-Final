@@ -19,7 +19,6 @@ export default class GetDataSensores {
       });
       const json = await response.json();
       this.dados = json;
-      console.log(json);
     } catch (err) {}
   }
 }

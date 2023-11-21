@@ -17,9 +17,9 @@ const position = document.querySelector('.table');
 const dateLocalStorage = localStorage.getItem('date');
 const showDate = new ShowDataSensores(
   dateLocalStorage,
-  'umidade'.toUpperCase(),
+  'temperatura'.toUpperCase(),
   position,
-  'Umidade',
+  'Temperatura',
 );
 showDate.showDatas();
 dateIrrigacao.value = dateLocalStorage;
@@ -28,9 +28,9 @@ const showDatasIrrigacao = () => {
   const localStorageDate = localStorage.setItem('date', dateIrrigacao.value);
   const showDate = new ShowDataSensores(
     dateIrrigacao.value,
-    'umidade'.toUpperCase(),
+    'temperatura'.toUpperCase(),
     position,
-    'Umidade',
+    'Temperatura',
   );
   showDate.clearTable();
   showDate.showDatas();

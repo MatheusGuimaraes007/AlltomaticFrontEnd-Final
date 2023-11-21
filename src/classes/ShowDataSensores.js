@@ -14,15 +14,13 @@ export default class ShowDataSensores extends GetDataSensores {
     const headerRow = document.createElement('tr');
     headerRow.className = 'primeiraLinha';
     headerRow.innerHTML = `
-      <td>Nome</td>
+      <td>Nome Sensor</td>
       <td>Data</td>
       <td>Hora</td>
       <td>${this.nameDataSensor}</td>
     `;
     table.appendChild(headerRow);
-
     this.position.appendChild(table);
-
     this.table = table;
   }
 
@@ -41,21 +39,54 @@ export default class ShowDataSensores extends GetDataSensores {
   async showDatas() {
     await this.getData();
     this.dados.forEach((item) => {
+      const dataUTC = item.dateHourData;
+      const data = new Date(dataUTC);
+
+      const opcoesDeFormatoData = {
+        day: 'numeric',
+        month: 'numeric',
+        year: 'numeric',
+        timeZone: 'America/Sao_Paulo',
+      };
+
+      const opcoesDeFormatoHora = {
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric',
+        hour12: false,
+        timeZone: 'America/Sao_Paulo',
+      };
+      const formatoBrasileiroData = new Intl.DateTimeFormat(
+        'pt-BR',
+        opcoesDeFormatoData,
+      );
+      const formatoBrasileiroHora = new Intl.DateTimeFormat(
+        'pt-BR',
+        opcoesDeFormatoHora,
+      );
+      const dataFormatada = formatoBrasileiroData.format(data);
+      const horaFormatada = formatoBrasileiroHora.format(data);
       if (this.sensor === 'UMIDADE') {
         return this.createTableRow(
           'Sensor de Umidade',
-          item.date,
-          item.hora,
+          dataFormatada,
+          horaFormatada,
           item.dataUmidade,
         );
       } else if (this.sensor === 'TEMPERATURA') {
         return this.createTableRow(
           'Sensor de Temperatura',
-          item.date,
-          item.hora,
-          item.dataUmidade,
+          dataFormatada,
+          horaFormatada,
+          `${item.dataTemperatura} ºC`,
         );
       }
     });
+  }
+  clearTable() {
+    while (this.position.firstChild) {
+      this.position.removeChild(this.position.firstChild);
+    }
+    this.createTable();
   }
 }

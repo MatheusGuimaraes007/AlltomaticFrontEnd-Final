@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../style.css">
 </head>
 
-<body>
+<body style="background-image: none;">
   <header id="headerMinhasPlantas">
 
     <div class="infoUser">
@@ -34,7 +34,7 @@
   <section id="sectionPrincipal">
     <nav id="navegacao">
       <div id="abas">
-        <a href="/" class="fundoVerde">
+        <a href="../configConta/configConta.html">
           <img src="../../../public/images/configConta.svg" alt="configuracoes de conta">
           <span>Configurações de Conta</span>
         </a>
@@ -46,7 +46,7 @@
           <img src="../../../public/images/irrigacao.svg" alt="configuracoes de conta">
           <span>Irrigação</span>
         </a>
-        <a href="../temperatura/temperatura.html">
+        <a href="../temperatura/temperatura.html" class="fundoVerde">
           <img src="../../../public/images/temperatura.svg" alt="configuracoes de conta">
           <span>Temperatura</span>
         </a>
@@ -76,41 +76,18 @@
         </div>
       </div>
     </nav>
-    <section class="configConta">
-      <div class="userDados">
-        <div class="nomeUsuarioEmailSenha">
-          <h1>Dados Pessoais</h1>
-          <div>
-            <span class="nomeUsuario">Nome</span>
-            <a class="alt-name">Alterar Nome</a>
-          </div>
-          <div>
-            <span class="senha">Senha</span>
-            <a class="alt-password">Alterar Senha</a>
-          </div>
-          <div>
-            <span class="email">Email</span>
-            <a class="alt-email">Alterar Email</a>
-          </div>
-          <div>
-            <span class="cpf">CPF</span>
-            <span class="dataNascimento">data</span>
-          </div>
-        </div>
-        <div class="userEndereco">
-          <h1>Dados Endereço</h1>
-          <span class="rua">Rua</span>
-          <span class="bairro">Bairro</span>
-          <span class="cep">Cep</span>
-          <span class="numero">numero</span>
-          <span class="complemento">complemento</span>
-          <a class="alt-endereco">Alterar Endereço</a>
-        </div>
+    <section class="irrigacao">
+      <div class="irrigacao-head">
+        <h1>Dados de Irrigação</h1>
+        <label for="dateIrrigacao">Selecione a data</label>
+        <input type="date" id="dateIrrigacao" required>
+        <button type="submit" id="mostrarIrrigacao">Mostrar</button>
+      </div>
+      <div class="table">
       </div>
     </section>
   </section>
-
-  <script type="module" src="configConta.js"></script>
+  <script type="module" src="temperatura.js"></script>
 </body>
 
 </html>
