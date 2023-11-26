@@ -80,6 +80,13 @@ export default class ShowDataSensores extends GetDataSensores {
           horaFormatada,
           `${item.dataTemperatura} ºC`,
         );
+      } else if (this.sensor === 'LUMINOSIDADE') {
+        return this.createTableRow(
+          'Luz',
+          dataFormatada,
+          horaFormatada,
+          item.dataLuminosidade,
+        );
       }
     });
   }

@@ -30,7 +30,7 @@
   opacity: 1;
 }
 .container-btn-registrado a:nth-child(1) {
-  background-color: var(--segundoVerde);
+  background-color: var(--terceiroVerde);
 }
 .container-btn-registrado a:nth-child(2) {
   background-color: var(--primeiroVerde);

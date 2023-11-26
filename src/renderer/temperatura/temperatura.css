@@ -227,7 +227,8 @@ body {
 }
 
 .table table {
-  border: 2px solid var(--terceiroVerde);
+  border-radius: 10px;
+  border: none;
   padding: 5PX 10px;
   background-color: var(--primeiroVerde);
 }

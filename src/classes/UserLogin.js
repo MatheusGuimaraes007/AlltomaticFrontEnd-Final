@@ -1,7 +1,8 @@
 export default class UserLogin {
-  constructor(usuario, senha) {
+  constructor(usuario, senha, loginError) {
     this.usuario = usuario;
     this.senha = senha;
+    this.loginError = loginError;
     this.url = 'http://186.235.2.225/auth/User';
     this.dados;
   }
@@ -20,8 +21,9 @@ export default class UserLogin {
         }),
       });
       const json = await response.json();
+      this.loginError.style.display = 'none';
       if (json.msg) {
-        confirm('Usuário não encontrado');
+        this.loginError.style.display = 'initial';
       } else {
         localStorage.setItem('usuario', this.usuario);
         localStorage.setItem('senha', this.senha);
@@ -29,6 +31,7 @@ export default class UserLogin {
       }
     } catch (err) {
       localStorage.clear();
+      this.loginError.style.display = 'initial';
       throw new Error(err);
     }
   }

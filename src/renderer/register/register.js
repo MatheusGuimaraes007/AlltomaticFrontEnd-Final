@@ -5,13 +5,16 @@ BuscarCep();
 
 const validarCPF = (cpf) => {
   cpf = cpf.replace(/\D/g, '');
-
   if (cpf.length !== 11) {
     return false;
   }
-
   return true;
 };
+
+function validateEmail(email) {
+  var padrao = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  return padrao.test(email);
+}
 
 const btnCadastrar = document.querySelector('#btn-cadastro');
 const primeiroNome = document.querySelector('#firstName');
@@ -43,6 +46,9 @@ const enviarUser = async (e) => {
   } else if (email.value === '') {
     containerAlert.style.display = 'initial';
     msgNotification.innerHTML = 'Insira um email';
+  } else if (validateEmail(email.value) === false) {
+    containerAlert.style.display = 'initial';
+    msgNotification.innerHTML = 'Email Inválido';
   } else if (senha.value === '') {
     containerAlert.style.display = 'initial';
     msgNotification.innerHTML = 'Crie uma senha';
@@ -105,3 +111,5 @@ const enviarUser = async (e) => {
 };
 
 btnCadastrar.addEventListener('click', enviarUser);
+
+console.log(validateEmail('matheusguimaraes668@gmail.com'));

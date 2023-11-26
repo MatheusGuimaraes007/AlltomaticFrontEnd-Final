@@ -17,6 +17,11 @@
 }
 .invalidLogin {
   display: none;
+  color: #ccc;
+  font-family: var(--fonteGeral);
+  margin-top: 0.2rem;
+  text-decoration: underline;
+  font-weight: bold;
 }
 #container {
   width: 100vw;
