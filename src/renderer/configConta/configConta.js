@@ -29,3 +29,10 @@ dataUser.showDatas('CEP', 'enderecoCep', cep);
 dataUser.showDatas('Número', 'enderecoNum', numero);
 dataUser.showDatas('Complemento', 'enderecoComplemento', complemento);
 dataUser.setDados();
+
+const sairApp = document.querySelector('.sairApp');
+const logOut = (e) => {
+  e.preventDefault();
+  window.location.href = '../index/index.html';
+};
+sairApp.addEventListener('click', logOut);

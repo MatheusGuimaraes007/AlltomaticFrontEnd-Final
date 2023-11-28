@@ -37,3 +37,10 @@ const showDatasIrrigacao = () => {
 };
 
 btnMostrarIrrigacao.addEventListener('click', showDatasIrrigacao);
+
+const sairApp = document.querySelector('.sairApp');
+const logOut = (e) => {
+  e.preventDefault();
+  window.location.href = '../index/index.html';
+};
+sairApp.addEventListener('click', logOut);

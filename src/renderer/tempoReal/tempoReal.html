@@ -28,6 +28,7 @@
         <img src="../../../public/images/ligado.svg" alt="ligado o equipamento">
       </div>
     </div>
+    <button class="sairApp">SAIR</button>
   </header>
 
 
@@ -50,11 +51,11 @@
           <img src="../../../public/images/temperatura.svg" alt="configuracoes de conta">
           <span>Temperatura</span>
         </a>
-        <a href="/" class="fundoVerde">
+        <a href="../luminosidade/luminosidade.html">
           <img src="../../../public/images/luz.svg" alt="sensor de luz">
           <span>Luz</span>
         </a>
-        <a href="/">
+        <a href="../tempoReal/tempoReal.html" class="fundoVerde">
           <img src="../../../public/images/tempReal.svg" alt="configuracoes de conta">
           <span>Tempo Real</span>
         </a>
@@ -81,7 +82,23 @@
       </div>
     </nav>
     <section class="tempoReal">
+      <div class="container-tempoReal">
+        <div class="descricao">
+          <h4>Data Atual</h4>
+          <span class="data-tempoReal"></span>
+          <h4>Horário Atual</h4>
+          <span class="horario-tempoReal"></span>
+          <h4>Temperatura Atual</h4>
+          <span class="temperatura-tempoReal"></span>
+          <h4>Umidade Atual</h4>
+          <span class="umidade-tempoReal"></span>
+          <h4>Luz Atual</h4>
+          <span class="luz-tempoReal"></span>
+        </div>
+        <div class="video">
 
+        </div>
+      </div>
     </section>
   </section>
   <script type="module" src="tempoReal.js"></script>
