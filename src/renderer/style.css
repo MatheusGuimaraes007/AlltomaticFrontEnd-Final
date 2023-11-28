@@ -10,6 +10,7 @@
 @import url('../renderer/temperatura/temperatura.css');
 @import url('../renderer/luminosidade/luminosidade.css');
 @import url('../renderer/tempoReal/tempoReal.css');
+@import url('../renderer/meuProgresso/meuProgresso.css');
 
 * {
   margin: 0;

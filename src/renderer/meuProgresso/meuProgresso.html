@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minhas Plantas</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body style="background-image: none;">
+  <header id="headerMinhasPlantas">
+
+    <div class="infoUser">
+      <div class="imgUser"></div>
+      <div class="infoUserDesc">
+        <span class="nomeUser"></span>
+        <span class="idUser"></span>
+      </div>
+    </div>
+    <div class="onOrOff">
+      <div class="conectado">
+        <span>Conectado</span>
+        <img src="../../../public/images/conectado.svg" alt="conectado a estufa">
+      </div>
+      <div class="ligado">
+        <span>Ligado</span>
+        <img src="../../../public/images/ligado.svg" alt="ligado o equipamento">
+      </div>
+    </div>
+    <button class="sairApp">SAIR</button>
+  </header>
+
+
+  <section id="sectionPrincipal">
+    <nav id="navegacao">
+      <div id="abas">
+        <a href="../configConta/configConta.html">
+          <img src="../../../public/images/configConta.svg" alt="configuracoes de conta">
+          <span>Configurações de Conta</span>
+        </a>
+        <a href="../meuProgresso/meuProgresso.html" class="fundoVerde">
+          <img src="../../../public/images/meuProgresso.svg" alt="configuracoes de conta">
+          <span>Meu Progresso</span>
+        </a>
+        <a href="../irrigacao/irrigacao.html">
+          <img src="../../../public/images/irrigacao.svg" alt="configuracoes de conta">
+          <span>Irrigação</span>
+        </a>
+        <a href="../temperatura/temperatura.html">
+          <img src="../../../public/images/temperatura.svg" alt="configuracoes de conta">
+          <span>Temperatura</span>
+        </a>
+        <a href="../luminosidade/luminosidade.html">
+          <img src="../../../public/images/luz.svg" alt="sensor de luz">
+          <span>Luz</span>
+        </a>
+        <a href="../tempoReal/tempoReal.html">
+          <img src="../../../public/images/tempReal.svg" alt="configuracoes de conta">
+          <span>Tempo Real</span>
+        </a>
+      </div>
+      <div class="rodapeNav">
+        <img src="../../../public/images/logo_Alltomatic.ico" alt="logoAlltomatic">
+        <div id="socialMediaMinhasPlantas">
+          <div class="media" id="instagram">
+            <a href="/">
+              <img src="../../../public/images/instagram.svg" alt="logo instagram">
+            </a>
+          </div>
+          <div class="media" id="facebook">
+            <a href="/">
+              <img src="../../../public/images/facebook.svg" alt="logo Facebook">
+            </a>
+          </div>
+          <div class="media" id="linkedin">
+            <a href="/">
+              <img src="../../../public/images/linkedin.svg" alt="logo linkedin">
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="meuProgresso">
+      <div class="meuProgresso-head">
+        <input type="date" id="dateValues" required>
+        <button type="submit" id="mostrarValores">Mostrar</button>
+      </div>
+      <div class="container-meuProgresso">
+        <canvas id="grafico1"></canvas>
+      </div>
+    </section>
+  </section>
+  <script type="module" src="meuProgresso.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+
+</html>

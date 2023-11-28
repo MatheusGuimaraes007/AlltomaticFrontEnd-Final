@@ -188,28 +188,40 @@ body {
   height: 80vh;
   background-image: url('../../../public/images/florFundo.svg');
   background-size: cover;
-  gap: 30px;
-  background-color: blue;
+  border: 4px solid var(--terceiroVerde);
 }
 
 .container-tempoReal {
-  width: 100%;
-  background-color: red;
+  margin-top: 30px;
+  width: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
+.tempoReal h1 {
+  font-size: 50px;
+}
+.container-tempoReal .descricao span {
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+.container-tempoReal .descricao h4 {
+  font-size: 25px;
+  margin-bottom: 3px;
+}
 .container-tempoReal .descricao {
   width: 100%;
-  background-color: yellow;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
 }
 
 .container-tempoReal .video {
   width: 100%;
-  height: 40px;
-  background-color: green;
 }
+
 
 .sairApp {
   border-radius: 5px;
